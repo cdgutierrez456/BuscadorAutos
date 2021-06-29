@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Funciones
 function mostrarAutos() {
     autos.forEach(auto => {
+        const {marca, modelo, year, puertas, transmision, precio, color} = auto;
         const autoHTML = document.createElement('p');
 
         autoHTML.textContent = `
-            ${auto.marca}
+            ${marca} ${modelo} - ${year} - ${puertas} Puertas - Transmision: ${transmision} - Precio: ${precio} - Color: ${color}
         `;
 
         // Insertar en el html
